@@ -13,6 +13,7 @@ function App() {
       <Nav></Nav>
       <Hero></Hero>
       <Features></Features>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, autem.</h3>
     </div>
   );
 }
