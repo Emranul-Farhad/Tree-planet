@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import one from '../../Images/one.png'
 import './Gallery.css'
 
 import gsap from 'gsap';

@@ -57,5 +57,16 @@
 }
 
 body{
-  background-color: #F5F0EC;
+  /* background-color: #001530; */
+  /* background-image: linear-gradient(#59D1D1, #001530); */
+  background: linear-gradient(to top, #001530, #0EC9AC);
+}
+
+@font-face { 
+	font-family: "hack"; 
+	src: url('./Components/Font/SonOfAGlitchItalic-xa3m.ttf'); 
+}
+
+.te{
+  font-family: hack;
 }

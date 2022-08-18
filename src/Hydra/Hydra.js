@@ -1,38 +1,27 @@
 import React from 'react'
-import { NavLink} from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
+import logo from '../Images/hacker.png'
 
 
 const Hydra = () => {
 
 
-  return (
-    <div>
-        
-        <div class="navbar bg-base-100">
-  <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-  </div>
-  <div class="flex-none">
-    <ul class="menu menu-horizontal p-0">
-      <li><a>Item 1</a></li>
-      <li tabindex="0">
-        <a>
-          Parent
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-        <ul class="p-2 bg-base-100">
-          <li><a>Submenu 1</a></li>
-          <li><a>Submenu 2</a></li>
-        </ul>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-</div>
-
-    </div>
-  )
+    return (
+        <div className='p-[2rem]'>
+            <div className="navbar">
+                <div className="flex-1 items-center">
+                    <NavLink to="/" className="btn btn-ghost normal-case text-xl w-[100px]"> <img src={logo} alt="" /> </NavLink>
+                </div>
+                <div className="flex-none">
+                    <ul className="menu menu-horizontal p-0">
+                        <li>  <NavLink to='/Download' className="btn bg-[#00FFC3] border-0" > Download </NavLink> </li>
+                        <li> <NavLink to='/login'> Login </NavLink>  </li>
+                    </ul>
+                </div>
+            </div>
+            <h1 className='mt-[50px] te text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptate atque omnis. Dolor quidem expedita architecto temporibus voluptas fuga, reprehenderit exercitationem saepe quos veniam error velit? Id culpa dolorem, unde eos ullam qui similique deleniti error, natus molestias sit commodi!</h1>
+        </div>
+    )
 }
 
 export default Hydra
