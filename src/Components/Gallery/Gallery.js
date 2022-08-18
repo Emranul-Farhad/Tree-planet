@@ -1,6 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import one from '../../Images/one.png'
 import './Gallery.css'
+
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger)
+
+
 
 // images for gallery
 const images = [
@@ -37,9 +44,22 @@ const images = [
 
 function GalleryItem({ src, title, category, subtitle, updateActiveImage, index }) {
     // console.log(src)
+
+    // const ref = useRef(null)
+
+    // const onScreen= useOnScreen(ref, 0.5)
+    // useEffect(()=> {
+    //     if(onScreen){
+    //         updateActiveImage(index)
+    //     }
+    // },[onScreen , index])
+
+
     return (
         <div>
-            <div className='gallery-item-wrapper'>
+            <div 
+            className='gallery-item-wrapper' >
+                <div></div>
                 <div className='gallery-item' >
                     <div className="gallery-item-info">
                         <h1 className="gallery-info-title">{title}</h1>
@@ -47,11 +67,11 @@ function GalleryItem({ src, title, category, subtitle, updateActiveImage, index 
                         <p className="gallery-info-category">{category}</p>
                     </div>
                     <div className='gallery-item-image'
-                        style={{ backgroundImage: `url(${src})` }}
+                        style={{ backgroundImage: `url(${src})`}}
                     >
-
                     </div>
                 </div>
+                <div></div>
             </div>
         </div>
     )
@@ -59,14 +79,34 @@ function GalleryItem({ src, title, category, subtitle, updateActiveImage, index 
 
 
 function Gallery() {
-
-
     const [activeImage, setActiveImage] = useState(1)
+   const ref = useRef(null)
+
+    // gspa animation
+    // useEffect(() => {
+    //   const sections = gsap.utils.toArray('.gallery-item-wrapper');
+    //   gsap.to(sections,{
+    //     xPercent : -100 * (sections.length-1),
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         start: 'top, top',
+    //         trigger: ref.current,
+    //         pin: true,
+    //         scrub: 0.5,
+    //         span: 1/(sections.length - 1),
+    //         end: ()=> `+=${ref.current.offsetWidth }`,      
+    //     }
+    //   })
+
+    //   ScrollTrigger.refresh()
+    // }, [])
+    
+
 
     return (
-        <section data-scroll-section className="section-wrapper gallery-wrap">
-
-            <div className="gallery">
+        <div>
+            <section data-scroll-section className="section-wrapper gallery-wrap">
+            <div className="gallery" ref={ref} >
                 <div className="gallery-counter">
                     <span>{activeImage}</span>
                     <span className="divider" />
@@ -82,6 +122,7 @@ function Gallery() {
                 ))}
             </div>
         </section>
+        </div>
     )
 }
 
