@@ -57,9 +57,7 @@
 }
 
 body{
-  /* background-color: #001530; */
-  /* background-image: linear-gradient(#59D1D1, #001530); */
-  background: linear-gradient(to top, #001530, #0EC9AC);
+  /* background-color: #0d211c86; */
 }
 
 @font-face { 
@@ -69,4 +67,8 @@ body{
 
 .te{
   font-family: hack;
+  letter-spacing: 3px;
+  line-height: 30px;
+  font-weight: 300;
+  font-size: 25px;
 }

@@ -20,11 +20,9 @@ module.exports = {
 		themes: [
 			{
 				mytheme: {
-					primary: "#0FCFEC",
-					secondary: "#19D3AE",
-					accent: "#3A4256",
-					neutral: "#3d4451",
-					"base-100": "#ffffff",
+					primary: "#00ffc3",
+					secondary: "#1ebbee",
+					"base-100": "#0d201c",
 				},
 			},
       "dracula",

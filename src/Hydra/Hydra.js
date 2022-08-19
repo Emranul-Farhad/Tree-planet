@@ -1,27 +1,40 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
-import logo from '../Images/hacker.png'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../Images/logo.png";
+import {BiCloudDownload} from 'react-icons/bi'
+import {CgProfile} from 'react-icons/cg'
+import Heros from "./Heros";
 
 
 const Hydra = () => {
-
-
-    return (
-        <div className='p-[2rem]'>
-            <div className="navbar">
-                <div className="flex-1 items-center">
-                    <NavLink to="/" className="btn btn-ghost normal-case text-xl w-[100px]"> <img src={logo} alt="" /> </NavLink>
-                </div>
-                <div className="flex-none">
-                    <ul className="menu menu-horizontal p-0">
-                        <li>  <NavLink to='/Download' className="btn bg-[#00FFC3] border-0" > Download </NavLink> </li>
-                        <li> <NavLink to='/login'> Login </NavLink>  </li>
-                    </ul>
-                </div>
-            </div>
-            <h1 className='mt-[50px] te text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptate atque omnis. Dolor quidem expedita architecto temporibus voluptas fuga, reprehenderit exercitationem saepe quos veniam error velit? Id culpa dolorem, unde eos ullam qui similique deleniti error, natus molestias sit commodi!</h1>
+  return (
+    <div className="bg-[#0d211c86]">
+      <div className="navbar bg-[#0db68c91] p-[.5rem] px-10">
+        <div className="flex-1 items-center ">
+          <img src={logo} alt="" className="w-12" />
+          <a className="mx-1 btn btn-ghost normal-case  font-[hack] font-[300] text-white text-2xl ">
+             Hydra Flasher </a>
         </div>
-    )
-}
+        <div className="flex-none">
+          <ul className="menu menu-horizontal p-0">
+            <li>
+              <a className="text-4xl text-primary " ><BiCloudDownload></BiCloudDownload> </a>
+            </li>
+            <li>
 
-export default Hydra
+              <a className="text-3xl text-primary" > <CgProfile></CgProfile> </a>
+            </li>
+
+            {/* login button  */}
+            <li>
+              <NavLink to="/login" className='font-[hack] text-white text-[300] text-2xl ' > Login </NavLink>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <Heros></Heros>
+    </div>
+  );
+};
+
+export default Hydra;
