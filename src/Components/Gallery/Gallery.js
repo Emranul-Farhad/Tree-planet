@@ -1,128 +1,53 @@
-import React, { useEffect, useRef, useState } from 'react'
-import './Gallery.css'
-
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger)
+import React from 'react'
+import Img from './Img';
 
 
 
-// images for gallery
-const images = [
-    {
-        src:
-            "https://images.unsplash.com/photo-1566204773863-cf63e6d4ab88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1345&q=100",
-        title: "Dracaena Trifasciata",
-        subtitle: "Live the Beauty",
-        category: "Shooting / Adv.Campaing",
-    },
-    {
-        src:
-            "https://images.unsplash.com/photo-1558603668-6570496b66f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=100",
-        title: "Cereus Penuvianus",
-        subtitle: "Live the Beauty",
-        category: "Shooting / Adv.Campaing",
-    },
-    {
-        src:
-            "https://images.unsplash.com/photo-1567225557594-88d73e55f2cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=100",
-        title: "Calliope",
-        subtitle: "Live the Beauty",
-        category: "Shooting / Adv.Campaing",
-    },
-    {
-        src:
-            "https://images.unsplash.com/photo-1611145367651-6303b46e4040?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2006&q=100",
-        title: "Golden Pothos",
-        subtitle: "Living Room",
-        category: "Shooting / Adv.Campaing",
-    },
-];
+const Gallery = () => {
 
-
-function GalleryItem({ src, title, category, subtitle, updateActiveImage, index }) {
-    // console.log(src)
-
-    // const ref = useRef(null)
-
-    // const onScreen= useOnScreen(ref, 0.5)
-    // useEffect(()=> {
-    //     if(onScreen){
-    //         updateActiveImage(index)
-    //     }
-    // },[onScreen , index])
-
-
-    return (
-        <div>
-            <div 
-            className='gallery-item-wrapper' >
-                <div></div>
-                <div className='gallery-item' >
-                    <div className="gallery-item-info">
-                        <h1 className="gallery-info-title">{title}</h1>
-                        <h2 className="gallery-info-subtitle">{subtitle}</h2>
-                        <p className="gallery-info-category">{category}</p>
-                    </div>
-                    <div className='gallery-item-image'
-                        style={{ backgroundImage: `url(${src})`}}
-                    >
-                    </div>
-                </div>
-                <div></div>
-            </div>
-        </div>
-    )
-}
-
-
-function Gallery() {
-    const [activeImage, setActiveImage] = useState(1)
-   const ref = useRef(null)
-
-    // gspa animation
-    // useEffect(() => {
-    //   const sections = gsap.utils.toArray('.gallery-item-wrapper');
-    //   gsap.to(sections,{
-    //     xPercent : -100 * (sections.length-1),
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         start: 'top, top',
-    //         trigger: ref.current,
-    //         pin: true,
-    //         scrub: 0.5,
-    //         span: 1/(sections.length - 1),
-    //         end: ()=> `+=${ref.current.offsetWidth }`,      
-    //     }
-    //   })
-
-    //   ScrollTrigger.refresh()
-    // }, [])
+    const images = [
+        // {
+        //     src:
+        //         "https://images.pexels.com/photos/8913244/pexels-photo-8913244.jpeg?auto=compress&cs=tinysrgb&w=600",
+        //     title: "Dracaena Trifasciata",
+        //     subtitle: "Live the Beauty",
+        //     category: "Shooting / Adv.Campaing",
+        // },
+        // {
+        //     src:
+        //         "https://images.pexels.com/photos/7896514/pexels-photo-7896514.jpeg?auto=compress&cs=tinysrgb&w=600",
+        //     title: "Cereus Penuvianus",
+        //     subtitle: "Live the Beauty",
+        //     category: "Shooting / Adv.Campaing",
+        // },
+        // {
+        //     src:
+        //         "https://images.pexels.com/photos/7906968/pexels-photo-7906968.jpeg?auto=compress&cs=tinysrgb&w=600",
+        //     title: "Calliope",
+        //     subtitle: "Live the Beauty",
+        //     category: "Shooting / Adv.Campaing",
+        // },
+        // {
+        //     src:
+        //         "https://images.pexels.com/photos/129743/pexels-photo-129743.jpeg?auto=compress&cs=tinysrgb&w=600",
+        //     title: "Golden Pothos",
+        //     subtitle: "Living Room",
+        //     category: "Shooting / Adv.Campaing",
+        // },
+    ];
     
 
-
-    return (
-        <div>
-            <section data-scroll-section className="section-wrapper gallery-wrap">
-            <div className="gallery" ref={ref} >
-                <div className="gallery-counter">
-                    <span>{activeImage}</span>
-                    <span className="divider" />
-                    <span>{images.length}</span>
-                </div>
-                {images?.map((image, index) => (
-                    <GalleryItem
-                        key={image.src}
-                        index={index}
-                        {...image}
-                        updateActiveImage={(index) => setActiveImage(index + 1)}
-                    />
-                ))}
-            </div>
-        </section>
-        </div>
-    )
+  return (
+    <>
+     {
+        images.map((ig , index) => 
+          
+         <Img ig={ig} ></Img> 
+          )
+     }
+    </>
+  )
 }
 
 export default Gallery
+

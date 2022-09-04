@@ -1,7 +1,4 @@
-/* tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 /* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap');
@@ -22,7 +19,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 60vmin;
   pointer-events: none;
 }
 
@@ -33,7 +30,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -56,9 +53,7 @@
   }
 }
 
-body{
-  /* background-color: #0d211c86; */
-}
+
 
 @font-face { 
 	font-family: "hack"; 
@@ -72,3 +67,33 @@ body{
   font-weight: 300;
   font-size: 25px;
 }
+
+.sp{
+  letter-spacing: 4px;
+  line-height: 4px;
+}
+
+
+body{
+  background: white;
+}
+
+.secondContainer{
+  display: flex;
+}
+
+
+
+.A, .B, .C{
+  margin-right: 7px;
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+

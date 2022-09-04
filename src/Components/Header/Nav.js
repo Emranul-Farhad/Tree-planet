@@ -8,9 +8,9 @@ const Nav = () => {
     <div>
      
         <div className='flex justify-between p-[2rem] uppercase helo text-3xl'>
-            <NavLink to="/hydra" >  Menue </NavLink>
+            <NavLink className='special' to="/" >  Menue </NavLink>
             <div className='special'>  FLIRTY FLOWERS </div>
-            <div>  Cart </div>
+            <div className='special'>  Cart </div>
         </div>
     </div>
   )

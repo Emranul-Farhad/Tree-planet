@@ -1,12 +1,12 @@
 import React from 'react'
-import Scroll from '../../TestScroll/Scroll'
 import About from '../About/About'
 import Features from '../Features/Features'
+import Gallery from '../Gallery/Gallery'
 import Nav from '../Header/Nav'
 import Hero from '../Hero/Hero'
+import LetterScene from '../Test/Lettertest'
+import Test from '../Test/Test'
 import Type from '../Typewriter/Type'
-
-
 
 
 
@@ -22,15 +22,17 @@ const Home = () => {
       <div className='mt-[50px]'>
         <About></About>
       </div>
-      <p className='text-end p-[2rem]' >gallery</p>
-      {/* <div className='mt-[100px]'>
+      <div>  
         <Gallery></Gallery>
-      </div> */}
+      </div>    
       <div className='mt-[450px]'>
         <Type></Type>
       </div>
-      <div className='mt-[100px]'>
-        <Scroll></Scroll>
+      <div>
+        <Test></Test>
+      </div>
+      <div>
+        <LetterScene></LetterScene>
       </div>
     </div>
   )
