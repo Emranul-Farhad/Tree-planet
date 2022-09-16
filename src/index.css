@@ -89,21 +89,14 @@ html {
   scroll-behavior: smooth;
 }
 
-.rh{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-}
 
-.hr1{
-  background: red;
-}
+.font-mission{
+   margin-bottom:10px ;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Syncopate', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
 
-.hr2{
-  background: #000;
-}
 
-.hr3{
-  background: blue;
 }

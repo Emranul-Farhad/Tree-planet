@@ -16,11 +16,11 @@ const Gallery = () => {
 
 
   return (
-    <div className="p-[1rem]">
+    <div className="p-[1rem] hidden md:block "  >
       <HorizontalScroll>
         {pictures.map((pic , index) => (
           <img
-            className="rounded w-[100vw] h-[100vh] object-cover"
+            className="rounded w-[100vw] h-[100vh] sm:mx-w-sm md:mx-w-md lg:mx-w-lg object-cover"
             src={pic.src}
             key={index}
           />
