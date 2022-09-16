@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../About/About";
 import Features from "../Features/Features";
+import Footer from "../Footer/Footer";
 import Gallery from "../Gallery/Gallery";
 import Newsleter from "../GEtin touch/Newsleter";
 import Nav from "../Header/Nav";
@@ -32,6 +33,9 @@ const Home = () => {
       </div>
       <div className="mt-[80px]">
         <Newsleter></Newsleter>
+      </div>
+      <div>
+        <Footer></Footer>
       </div>
       {/* <div>
         <Test></Test>
