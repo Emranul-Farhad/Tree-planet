@@ -17,8 +17,8 @@ const Gallery = () => {
 
 
   return (
-    <div>
-      <h3>ddd</h3>
+    <div className="p-[3rem]">
+      <p>aaa</p>
       <HorizontalScroll>
         {pictures.map((pic , index) => (
           <img
