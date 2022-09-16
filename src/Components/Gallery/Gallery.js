@@ -1,53 +1,35 @@
-import React from 'react'
-import Img from './Img';
-
-
+import React from "react";
+// import HorizontalScroll from "react-scroll-horizontal";
+import HorizontalScroll from "react-horizontal-scrolling";
 
 const Gallery = () => {
+  const pictures = [
+    {
+      src: "https://opencart.templatetrip.com/OPC07/OPC190_nursery/OPC04/image/cache/catalog/demo/banners/slider-02-1730x880.jpg",
+    },
+    {
+      src: "https://opencart.templatetrip.com/OPC07/OPC190_nursery/OPC05/image/cache/catalog/demo/banners/slider-02-1580x730.jpg",
+    },
+    {
+      src: "https://opencart.templatetrip.com/OPC07/OPC190_nursery/OPC05/image/cache/catalog/demo/banners/slider-01-1580x730.jpg",
+    },
+  ];
 
-    const images = [
-        // {
-        //     src:
-        //         "https://images.pexels.com/photos/8913244/pexels-photo-8913244.jpeg?auto=compress&cs=tinysrgb&w=600",
-        //     title: "Dracaena Trifasciata",
-        //     subtitle: "Live the Beauty",
-        //     category: "Shooting / Adv.Campaing",
-        // },
-        // {
-        //     src:
-        //         "https://images.pexels.com/photos/7896514/pexels-photo-7896514.jpeg?auto=compress&cs=tinysrgb&w=600",
-        //     title: "Cereus Penuvianus",
-        //     subtitle: "Live the Beauty",
-        //     category: "Shooting / Adv.Campaing",
-        // },
-        // {
-        //     src:
-        //         "https://images.pexels.com/photos/7906968/pexels-photo-7906968.jpeg?auto=compress&cs=tinysrgb&w=600",
-        //     title: "Calliope",
-        //     subtitle: "Live the Beauty",
-        //     category: "Shooting / Adv.Campaing",
-        // },
-        // {
-        //     src:
-        //         "https://images.pexels.com/photos/129743/pexels-photo-129743.jpeg?auto=compress&cs=tinysrgb&w=600",
-        //     title: "Golden Pothos",
-        //     subtitle: "Living Room",
-        //     category: "Shooting / Adv.Campaing",
-        // },
-    ];
-    
 
   return (
-    <>
-     {
-        images.map((ig , index) => 
-          
-         <Img ig={ig} ></Img> 
-          )
-     }
-    </>
-  )
-}
+    <div>
+      <h3>ddd</h3>
+      <HorizontalScroll>
+        {pictures.map((pic , index) => (
+          <img
+            className="rounded w-[100vw] h-[100vh] object-cover"
+            src={pic.src}
+            key={index}
+          />
+        ))}
+      </HorizontalScroll>
+    </div>
+  );
+};
 
-export default Gallery
-
+export default Gallery;

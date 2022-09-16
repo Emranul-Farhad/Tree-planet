@@ -4,9 +4,8 @@ import Features from '../Features/Features'
 import Gallery from '../Gallery/Gallery'
 import Nav from '../Header/Nav'
 import Hero from '../Hero/Hero'
-import LetterScene from '../Test/Lettertest'
 import Test from '../Test/Test'
-import Type from '../Typewriter/Type'
+// import Type from '../Typewriter/Type'
 
 
 
@@ -22,17 +21,14 @@ const Home = () => {
       <div className='mt-[50px]'>
         <About></About>
       </div>
-      <div>  
-        <Gallery></Gallery>
-      </div>    
-      <div className='mt-[450px]'>
-        <Type></Type>
-      </div>
-      <div>
+          <div>
+            <Gallery></Gallery>
+          </div>
+      {/* <div>
         <Test></Test>
-      </div>
+      </div> */}
       <div>
-        <LetterScene></LetterScene>
+        
       </div>
     </div>
   )

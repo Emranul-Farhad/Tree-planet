@@ -7416,10 +7416,10 @@
   dependencies:
     "react-is" "^16.13.1"
 
-"react-horizontal-scrolling@^0.1.9":
-  "integrity" "sha512-9bbP4CZAWnsxTMmbzSo3NUm3y9qo2GYgn3YNQKMxd58ayhC12ijDvf4GMNc76RtQe9Z/DyXWK/SlQGaw0/6fyQ=="
-  "resolved" "https://registry.npmjs.org/react-horizontal-scrolling/-/react-horizontal-scrolling-0.1.9.tgz"
-  "version" "0.1.9"
+"react-horizontal-scrolling@^0.1.12":
+  "integrity" "sha512-dA85VZKz65nHl5q1OvMZ25HrZlQl4n6oiq6zEA4TL+z/0mo8Rh9YwUW36xnDhxZWERZCRyR+Xq/bS7XDiumlWw=="
+  "resolved" "https://registry.npmjs.org/react-horizontal-scrolling/-/react-horizontal-scrolling-0.1.12.tgz"
+  "version" "0.1.12"
 
 "react-icons@^4.4.0":
   "integrity" "sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg=="
