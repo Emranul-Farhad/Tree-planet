@@ -1,5 +1,4 @@
 import React from "react";
-// import HorizontalScroll from "react-scroll-horizontal";
 import HorizontalScroll from "react-horizontal-scrolling";
 
 const Gallery = () => {
@@ -17,8 +16,7 @@ const Gallery = () => {
 
 
   return (
-    <div className="p-[3rem]">
-      <p>aaa</p>
+    <div className="p-[1rem]">
       <HorizontalScroll>
         {pictures.map((pic , index) => (
           <img
