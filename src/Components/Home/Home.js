@@ -5,6 +5,7 @@ import Gallery from "../Gallery/Gallery";
 import Nav from "../Header/Nav";
 import Hero from "../Hero/Hero";
 import Newproducts from "../NewProducts/Newproducts";
+import Prodcut from "../Products/Prodcut";
 import Test from "../Test/Test";
 // import Type from '../Typewriter/Type'
 
@@ -24,6 +25,9 @@ const Home = () => {
       </div>
       <div className="mt-[70px]" >
         <Newproducts></Newproducts>
+      </div>
+      <div  className="mt-[80px]">
+        <Prodcut></Prodcut>
       </div>
       {/* <div>
         <Test></Test>

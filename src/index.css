@@ -97,6 +97,11 @@ html {
     font-family: 'Syncopate', sans-serif;
     font-size: 12px;
     font-weight: 900;
+}
 
-
+.name{
+  font-family: 'Rubik Distressed', cursive;
+  font-weight: 200;
+color: green  ;
+font-size: 18px;
 }
