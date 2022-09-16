@@ -29,8 +29,8 @@ const Prodcut = () => {
     },
     {
       src : "https://cdn.shopify.com/s/files/1/0623/1851/0296/products/1_bfa8b69d-29a9-42fa-bb73-cef92fd91d9a.jpg?v=1642643029",
-      price: "white" ,
-      name : "354"
+      price: "352" ,
+      name : "Hena"
     },
     {
       src : "https://cdn.shopify.com/s/files/1/0623/1851/0296/products/12_cceddd78-bf58-4279-86ae-c8e951694374.jpg?v=1642643210",
@@ -54,7 +54,7 @@ const Prodcut = () => {
 
   return (
     <div className='p-[3rem] mx-auto'>
-      <h3>Best tobs for you </h3>
+      <h3 className='uppercase mb-[50px] special text-end'>Best tobs for you </h3>
       <div className='mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-7 gap-x-4'>
         {
           product.map(src => <Products prd={src} ></Products> )

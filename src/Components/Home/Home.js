@@ -2,6 +2,7 @@ import React from "react";
 import About from "../About/About";
 import Features from "../Features/Features";
 import Gallery from "../Gallery/Gallery";
+import Newsleter from "../GEtin touch/Newsleter";
 import Nav from "../Header/Nav";
 import Hero from "../Hero/Hero";
 import Newproducts from "../NewProducts/Newproducts";
@@ -28,6 +29,9 @@ const Home = () => {
       </div>
       <div  className="mt-[80px]">
         <Prodcut></Prodcut>
+      </div>
+      <div className="mt-[80px]">
+        <Newsleter></Newsleter>
       </div>
       {/* <div>
         <Test></Test>
