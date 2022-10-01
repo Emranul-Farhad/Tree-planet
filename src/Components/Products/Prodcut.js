@@ -1,6 +1,6 @@
 import React from 'react'
 import Products from './Products'
-
+import Parallax from 'react-rellax'
 
 
 
@@ -55,13 +55,19 @@ const Prodcut = () => {
   return (
     <div className='p-[3rem] mx-auto'>
       <h3 className='uppercase mb-[50px] special text-end'>Best tobs for you </h3>
-      <div className='mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-7 gap-x-4'>
-        {
-          product.map(src => <Products prd={src} ></Products> )
+      <div>
+       
+   <Parallax  className='mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-7 gap-x-4'  speed={0}>
+     {
+          product.map(src => <Parallax speed={0}> <Products prd={src} ></Products> </Parallax> )
         }
+   </Parallax>
+
       </div>
     </div>
   )
 }
 
 export default Prodcut 
+
+

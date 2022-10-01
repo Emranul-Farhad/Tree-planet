@@ -1,6 +1,6 @@
 import React from 'react'
 import NProducts from './NProducts'
-
+import Parallax from 'react-rellax'
 
 const Newproducts = () => {
 
@@ -41,6 +41,7 @@ const Newproducts = () => {
   ]
 
   return (
+   
     <div className='p-[3rem] mx-auto'>
        <div className='mb-[40px]'>
         <h3 className='text-center uppercase text-[20px] special '> Save extra 7% </h3>
@@ -49,14 +50,15 @@ const Newproducts = () => {
             <div className='mx-auto'>
                 <img src="https://cdn.shopify.com/s/files/1/0274/5001/5849/files/000Banner-432x694_1e44fc54-cfbe-4939-871a-637fae939e34.png?v=1571565051" alt="" />
             </div>
-            <div className='grid grid-cols-1 pt-[35px] mx-auto md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-5 gap-y-10 lg:gap-y-0'>
+         <div className='grid grid-cols-1 pt-[35px] mx-auto md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-5 gap-y-10 lg:gap-y-0'>
              {
                 newproducts.map(img => <NProducts key={img.id}
                      Nprd={img} ></NProducts> )
              }
-            </div>
+            </div>  
         </div>
     </div>
+   
   )
 }
 

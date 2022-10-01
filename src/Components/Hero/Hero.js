@@ -4,6 +4,7 @@ import './Hero.css'
 
 const Hero = () => {
 
+
     return (
         <section className=' mt-5'>
             <ul className='intro'>
